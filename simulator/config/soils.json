@@ -1,0 +1,5 @@
+{
+  "sand": { "wilting_pt": 6,  "field_cap": 17, "saturation": 43, "drainage_per_day": 10 },
+  "loam": { "wilting_pt": 12, "field_cap": 28, "saturation": 47, "drainage_per_day": 2 },
+  "clay": { "wilting_pt": 20, "field_cap": 32, "saturation": 47, "drainage_per_day": 0.5 }
+}

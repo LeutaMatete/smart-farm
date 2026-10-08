@@ -4,10 +4,10 @@ A single "bucket" model of the root zone.
 State: theta = volumetric soil moisture in % (reported by sensors as moisture_pct).
 
 ## Soil constants (% volumetric; approximate, verified and cited in Step 6)
-    texture   wilting_pt   field_cap   saturation   drainage_d (per day)
-    sand          5           12          40            10
-    loam         12           27          45             2
-    clay         24           38          50             0.5
+  texture	wilting_pt	field_cap	saturation	drainage_d (per day)
+sand	6	17	43	10
+loam	12	28	47	2
+clay	20	32	47	0.5
 
 wilting_pt  = below this, plants cannot extract water
 field_cap   = water the soil holds after excess has drained

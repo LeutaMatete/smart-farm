@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Telemetry message v1",
+  "type": "object",
+  "required": ["v", "msg_id", "ts", "node", "moisture_pct", "temp_c"],
+  "additionalProperties": false,
+  "properties": {
+    "v": { "const": 1 },
+    "msg_id": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$"
+    },
+    "ts": {
+      "type": "string",
+      "pattern": "^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}(\\.\\d+)?Z$"
+    },
+    "node": { "type": "string", "pattern": "^[a-z0-9_-]+$" },
+    "moisture_pct": { "type": "number", "minimum": 0, "maximum": 100 },
+    "temp_c": { "type": "number", "minimum": -30, "maximum": 60 },
+    "humidity_pct": { "type": "number", "minimum": 0, "maximum": 100 },
+    "battery_v": { "type": "number", "minimum": 0, "maximum": 5 },
+    "soil_ph": { "type": "number", "minimum": 0, "maximum": 14 },
+    "ec_ds_m": { "type": "number", "minimum": 0, "maximum": 20 }
+  }
+}
